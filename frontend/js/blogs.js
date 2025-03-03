@@ -1,3 +1,5 @@
+import { config } from '../backend/config/config.js'; 
+
 document.addEventListener("DOMContentLoaded", async () => {
     const blogsContainer = document.getElementById("blogsContainer");
 

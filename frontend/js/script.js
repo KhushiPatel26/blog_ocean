@@ -1,3 +1,5 @@
+import { config } from '../backend/config/config.js'; 
+
 console.log("script.js is loaded!");
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const blogId = urlParams.get('id');
             const commentText = this.querySelector('textarea[name="comment"]').value;
 
-            fetch('http://localhost:5000/comments/add', {
+            fetch(`${config.HOST}:${config.PORT}/comments/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function checkAuth() {
-    fetch('http://localhost:5000/auth/check-session')
+    fetch(`${config.HOST}:${config.PORT}/auth/check-session`)
         .then(response => response.json())
         .then(data => {
             if (!data.loggedIn) {
@@ -54,7 +56,7 @@ function checkAuth() {
 }
 
 function fetchBlogs() {
-    fetch('http://localhost:5000/allblogs')
+    fetch(`${config.HOST}:${config.PORT}/allblogs`)
         .then(response => response.json())
         .then(blogs => {
             const blogContainer = document.querySelector('.grid-container');
@@ -83,7 +85,7 @@ function fetchBlogDetails() {
         return;
     }
 
-    fetch(`http://localhost:5000/blogs/${blogId}`)
+    fetch(`${config.HOST}:${config.PORT}/blogs/${blogId}`)
         .then(response => response.json())
         .then(blog => {
             document.querySelector('.post-title').textContent = blog.title;
@@ -105,7 +107,7 @@ function fetchBlogDetails() {
 }
 
 function fetchComments(blogId) {
-    fetch(`http://localhost:5000/comments/${blogId}`)
+    fetch(`${config.HOST}:${config.PORT}/comments/${blogId}`)
         .then(response => response.json())
         .then(comments => {
             const commentsList = document.querySelector('.comments-list');

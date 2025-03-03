@@ -1,3 +1,5 @@
+import { config } from '../backend/config/config.js'; 
+
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch("http://localhost:5000/users/profile", { credentials: "include" });

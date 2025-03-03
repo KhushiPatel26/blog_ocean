@@ -1,3 +1,5 @@
+import { config } from '../backend/config/config.js'; 
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");
     const signupForm = document.getElementById("signupForm");
@@ -8,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
-            const response = await fetch("http://localhost:5000/auth/login", {
+            const response = await fetch(`${config.HOST}:${config.PORT}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const phone = document.getElementById("phone").value;
             const dob = document.getElementById("dob").value;
 
-            const response = await fetch("http://localhost:5000/auth/signup", {
+            const response = await fetch(`${config.HOST}:${config.PORT}/auth/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password, phone, dob }),
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function logout() {
-    await fetch("http://localhost:5000/auth/logout", { credentials: "include" });
+    await fetch("${config.HOST}:${config.PORT}/auth/logout", { credentials: "include" });
     alert("Logged out!");
     window.location.href = "login.html";
 }
