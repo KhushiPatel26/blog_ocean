@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog-Ocean - Profile</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-logo">
+        <a href="index.html">Blog-Ocean</a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/profile" class="active">Profile</a></li>
+          <li><a href="/create_blog">New Post</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>User Profile</h1>
+    <section id="profileContainer" class="profile-info card">
+      <h2>Loading profile...</h2>
+    </section>
+    <section class="profile-details grid-two">
+      <div class="profile-info card">
+        <!-- <h2>Personal Info</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> john@example.com</p>
+        <p><strong>Member Since:</strong> January 2025</p> -->
+        <h2>Loading profile...</h2>
+        <div class="action-buttons">
+          <a href="#" class="btn">Edit Profile</a>
+          <a href="#" class="btn danger-btn delete-account">Delete Account</a>
+        </div>
+      </div>
+      <div class="profile-stats card">
+        <h2>My Activity</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Posts</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">42</div>
+            <div class="stat-label">Comments</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">128</div>
+            <div class="stat-label">Likes</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Bookmarks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="user-posts">
+      <h2>My Posts</h2>
+      <div class="grid-container">
+        <div class="card">
+          <h3>Exploring Urban Gardening</h3>
+          <div class="meta">Posted: 2025-02-20</div>
+          <a href="/view_blog?id=1" class="btn">View Post</a>
+        </div>
+        <div class="card">
+          <h3>The Art of Coffee Brewing</h3>
+          <div class="meta">Posted: 2025-02-18</div>
+          <a href="/view_blog?id=2" class="btn">View Post</a>
+        </div>
+      </div>
+    </section>
+    <section class="saved-posts">
+        <h2>Saved Posts</h2>
+        <div class="grid-container">
+          <div class="card">
+            <h3>Exploring Urban Gardening</h3>
+            <div class="meta">Posted: 2025-02-20</div>
+            <a href="/view_blog?id=1" class="btn">View Post</a>
+          </div>
+          <div class="card">
+            <h3>The Art of Coffee Brewing</h3>
+            <div class="meta">Posted: 2025-02-18</div>
+            <a href="/view_blog?id=2" class="btn">View Post</a>
+          </div>
+        </div>
+      </section>
+      <section class="liked-posts">
+        <h2>Liked Posts</h2>
+        <div class="grid-container">
+          <div class="card">
+            <h3>Exploring Urban Gardening</h3>
+            <div class="meta">Posted: 2025-02-20</div>
+            <a href="/view_blog?id=1" class="btn">View Post</a>
+          </div>
+          <div class="card">
+            <h3>The Art of Coffee Brewing</h3>
+            <div class="meta">Posted: 2025-02-18</div>
+            <a href="/view_blog?id=2" class="btn">View Post</a>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Blog-Ocean | <a href="#" class="footer-link">Privacy Policy</a></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

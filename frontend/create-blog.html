@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog-Ocean - New Post</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-logo">
+        <a href="index.html">Blog-Ocean</a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/create_blog" class="active">New Post</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Create New Post</h1>
+    <section class="post-form">
+      <form action="/blogs/create_blog" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="post-title">Title:</label>
+          <input type="text" id="post-title" name="title" placeholder="Enter post title" required />
+        </div>
+        <div class="form-group">
+          <label for="post-content">Content:</label>
+          <textarea id="post-content" name="content" rows="10" placeholder="Write your post here..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cover-image">Cover Image:</label>
+          <input type="file" id="cover-image" name="coverImage" required />
+        </div>
+        <div class="action-buttons">
+          <button type="submit" class="btn">Publish</button>
+          <button type="button" class="btn">Save Draft</button>
+          <button type="button" class="btn danger-btn">Cancel</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Blog-Ocean | <a href="#" class="footer-link">Privacy Policy</a></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
