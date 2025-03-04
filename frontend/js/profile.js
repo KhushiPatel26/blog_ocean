@@ -2,7 +2,7 @@ import { config } from '../backend/config/config.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch("http://localhost:5000/users/profile", { credentials: "include" });
+        const response = await fetch(`${config.HOST}:${config.PORT}/users/profile`, { credentials: "include" });
 
         if (!response.ok) {
             alert("Please log in first!");

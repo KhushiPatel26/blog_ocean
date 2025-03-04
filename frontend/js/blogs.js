@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const blogsContainer = document.getElementById("blogsContainer");
 
     if (blogsContainer) {
-        const response = await fetch("http://localhost:5000/blogs/all");
+        const response = await fetch(`${config.HOST}:${config.PORT}/blogs/all`);
         const blogs = await response.json();
 
         blogsContainer.innerHTML = blogs.map(blog => `
@@ -21,7 +21,7 @@ async function createBlog() {
     const title = document.getElementById("title").value;
     const content = document.getElementById("content").value;
 
-    const response = await fetch("http://localhost:5000/blogs/create", {
+    const response = await fetch(`${config.HOST}:${config.PORT}/blogs/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, content }),
