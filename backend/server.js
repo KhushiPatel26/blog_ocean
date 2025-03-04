@@ -1,4 +1,4 @@
-import { config } from './config/config.js';
+const config = require('./config/config');
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
